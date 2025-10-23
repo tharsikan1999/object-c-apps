@@ -11,22 +11,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9F027FCA2EA9E5E1008AE951 /* Exceptions for "Fancy Text Creator Application" folder in "Fancy Text Creator Application" target */ = {
+		9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Fancy Text Creator Application" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Info.plist,
+				"Fancy Text Creator Application/Info.plist",
 			);
 			target = 9F027FB22EA9E5E0008AE951 /* Fancy Text Creator Application */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9F027FB52EA9E5E0008AE951 /* Fancy Text Creator Application */ = {
+		9FBD11BD2EAA02CF00623263 /* Object-c Apps */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9F027FCA2EA9E5E1008AE951 /* Exceptions for "Fancy Text Creator Application" folder in "Fancy Text Creator Application" target */,
+				9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Fancy Text Creator Application" target */,
 			);
-			path = "Fancy Text Creator Application";
+			path = "Object-c Apps";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,7 +45,7 @@
 		9F027FAA2EA9E5E0008AE951 = {
 			isa = PBXGroup;
 			children = (
-				9F027FB52EA9E5E0008AE951 /* Fancy Text Creator Application */,
+				9FBD11BD2EAA02CF00623263 /* Object-c Apps */,
 				9F027FB42EA9E5E0008AE951 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +74,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9F027FB52EA9E5E0008AE951 /* Fancy Text Creator Application */,
+				9FBD11BD2EAA02CF00623263 /* Object-c Apps */,
 			);
 			name = "Fancy Text Creator Application";
 			packageProductDependencies = (
