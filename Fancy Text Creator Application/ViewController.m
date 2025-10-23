@@ -2,9 +2,7 @@
 //  ViewController.m
 //  FancyTextCreator
 //
-//  Created by Aaron Caines on 22/08/2018.
-//  Copyright © 2018 Aaron Caines. All rights reserved.
-//
+//  Created by Tharsikan Sathasivam on 2025-10-23.
 
 #import "ViewController.h"
 
