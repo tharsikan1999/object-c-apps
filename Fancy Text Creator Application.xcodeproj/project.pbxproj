@@ -10,23 +10,10 @@
 		9F027FB32EA9E5E0008AE951 /* Object-c Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object-c Apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Object-c Apps" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"Fancy Text Creator Application/Info.plist",
-			);
-			target = 9F027FB22EA9E5E0008AE951 /* Object-c Apps */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9FBD11BD2EAA02CF00623263 /* Object-c Apps */ = {
+		9FBD11BD2EAA02CF00623263 /* Fancy Text Creator Application */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Object-c Apps" target */,
-			);
-			path = "Object-c Apps";
+			path = "Fancy Text Creator Application";
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -45,7 +32,7 @@
 		9F027FAA2EA9E5E0008AE951 = {
 			isa = PBXGroup;
 			children = (
-				9FBD11BD2EAA02CF00623263 /* Object-c Apps */,
+				9FBD11BD2EAA02CF00623263 /* Fancy Text Creator Application */,
 				9F027FB42EA9E5E0008AE951 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +61,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9FBD11BD2EAA02CF00623263 /* Object-c Apps */,
+				9FBD11BD2EAA02CF00623263 /* Fancy Text Creator Application */,
 			);
 			name = "Object-c Apps";
 			packageProductDependencies = (
@@ -97,7 +84,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Object-c Apps" */;
+			buildConfigurationList = 9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Fancy Text Creator Application" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -310,7 +297,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Object-c Apps" */ = {
+		9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Fancy Text Creator Application" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F027FCE2EA9E5E1008AE951 /* Debug */,
