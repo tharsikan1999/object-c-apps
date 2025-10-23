@@ -7,16 +7,16 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		9F027FB32EA9E5E0008AE951 /* Fancy Text Creator Application.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fancy Text Creator Application.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F027FB32EA9E5E0008AE951 /* Object-c Apps.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Object-c Apps.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Fancy Text Creator Application" target */ = {
+		9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Object-c Apps" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				"Fancy Text Creator Application/Info.plist",
 			);
-			target = 9F027FB22EA9E5E0008AE951 /* Fancy Text Creator Application */;
+			target = 9F027FB22EA9E5E0008AE951 /* Object-c Apps */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
@@ -24,7 +24,7 @@
 		9FBD11BD2EAA02CF00623263 /* Object-c Apps */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Fancy Text Creator Application" target */,
+				9FBD11DB2EAA02E300623263 /* Exceptions for "Object-c Apps" folder in "Object-c Apps" target */,
 			);
 			path = "Object-c Apps";
 			sourceTree = "<group>";
@@ -53,7 +53,7 @@
 		9F027FB42EA9E5E0008AE951 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F027FB32EA9E5E0008AE951 /* Fancy Text Creator Application.app */,
+				9F027FB32EA9E5E0008AE951 /* Object-c Apps.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,9 +61,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F027FB22EA9E5E0008AE951 /* Fancy Text Creator Application */ = {
+		9F027FB22EA9E5E0008AE951 /* Object-c Apps */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F027FCB2EA9E5E1008AE951 /* Build configuration list for PBXNativeTarget "Fancy Text Creator Application" */;
+			buildConfigurationList = 9F027FCB2EA9E5E1008AE951 /* Build configuration list for PBXNativeTarget "Object-c Apps" */;
 			buildPhases = (
 				9F027FAF2EA9E5E0008AE951 /* Sources */,
 				9F027FB02EA9E5E0008AE951 /* Frameworks */,
@@ -76,11 +76,11 @@
 			fileSystemSynchronizedGroups = (
 				9FBD11BD2EAA02CF00623263 /* Object-c Apps */,
 			);
-			name = "Fancy Text Creator Application";
+			name = "Object-c Apps";
 			packageProductDependencies = (
 			);
 			productName = "Fancy Text Creator Application";
-			productReference = 9F027FB32EA9E5E0008AE951 /* Fancy Text Creator Application.app */;
+			productReference = 9F027FB32EA9E5E0008AE951 /* Object-c Apps.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -97,7 +97,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Fancy Text Creator Application" */;
+			buildConfigurationList = 9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Object-c Apps" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -111,7 +111,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F027FB22EA9E5E0008AE951 /* Fancy Text Creator Application */,
+				9F027FB22EA9E5E0008AE951 /* Object-c Apps */,
 			);
 		};
 /* End PBXProject section */
@@ -310,7 +310,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Fancy Text Creator Application" */ = {
+		9F027FAE2EA9E5E0008AE951 /* Build configuration list for PBXProject "Object-c Apps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F027FCE2EA9E5E1008AE951 /* Debug */,
@@ -319,7 +319,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F027FCB2EA9E5E1008AE951 /* Build configuration list for PBXNativeTarget "Fancy Text Creator Application" */ = {
+		9F027FCB2EA9E5E1008AE951 /* Build configuration list for PBXNativeTarget "Object-c Apps" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F027FCC2EA9E5E1008AE951 /* Debug */,
