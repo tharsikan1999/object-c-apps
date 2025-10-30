@@ -1,5 +1,5 @@
 #import "AppDelegate.h"
-#import "cryptlex/LexActivator.h"
+#import "Cryptlex/LexActivator.h"
 
 @interface AppDelegate () <NSTableViewDataSource, NSTableViewDelegate>
 
@@ -14,53 +14,59 @@
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-    enum LexStatusCodes status;
+    // 🔹 Prepare Cryptlex data directory (user-level)
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSApplicationSupportDirectory, NSUserDomainMask, YES);
+    NSString *appSupport = (paths.count > 0) ? paths[0] : NSTemporaryDirectory();
+    NSString *bundleID = [[NSBundle mainBundle] bundleIdentifier] ?: @"com.personal.todo";
+    NSString *lexDataDir = [appSupport stringByAppendingPathComponent:bundleID];
 
-    // ✅ Load product data from .dat file in app bundle
+    if (![[NSFileManager defaultManager] fileExistsAtPath:lexDataDir]) {
+        NSError *dirError = nil;
+        [[NSFileManager defaultManager] createDirectoryAtPath:lexDataDir
+                                  withIntermediateDirectories:YES
+                                                   attributes:nil
+                                                        error:&dirError];
+        if (dirError) {
+            NSLog(@"⚠️ Failed to create data directory %@: %@", lexDataDir, dirError);
+        }
+    }
+
+    SetDataDirectory([lexDataDir UTF8String]);
+
+    // 🔹 Load product data
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"Product_Todo" ofType:@"dat"];
     if (!filePath) {
-        NSLog(@"❌ Product data file not found!");
         [self showLicenseError:@"Product data file missing."];
         return;
     }
-    
-    NSLog( @"🔑 Loading product data from: %@", filePath);
 
-    NSString *productData = [NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    NSString *productData = [NSString stringWithContentsOfFile:filePath
+                                                      encoding:NSUTF8StringEncoding
+                                                         error:nil];
     if (!productData) {
-        NSLog(@"❌ Failed to read product data file!");
         [self showLicenseError:@"Failed to read product data."];
         return;
     }
-    
-    NSLog( @"🔑 Product data loaded successfully.", productData);
 
-    // ✅ Initialize Cryptlex
-    status = SetProductData([productData UTF8String]);
-    if (status != LA_OK) {
-        NSLog(@"❌ SetProductData failed: %d", status);
+    if (SetProductData([productData UTF8String]) != LA_OK) {
         [self showLicenseError:@"Product data error"];
         return;
     }
-    
-    NSLog( @"🔑 Product data set successfully.", status);
 
-    status = SetProductId("019a2e73-1f14-7ae7-bfa8-3653d1ef6ec2", LA_USER);
-    NSLog(@"SetProductId status: %d", status);
-    
+    // 🔹 Set Product ID (user-level to avoid admin permissions)
+    enum LexStatusCodes status = SetProductId("019a2e73-1f14-7ae7-bfa8-3653d1ef6ec2", LA_USER);
     if (status != LA_OK) {
-        NSLog(@"❌ SetProductId failed: %d", status);
-        [self showLicenseError:@"Product ID error"];
+        [self showLicenseError:[NSString stringWithFormat:@"Product ID error: %d", status]];
         return;
     }
 
-    // ✅ Check license
+    // 🔹 Check license
     status = IsLicenseGenuine();
     if (status == LA_OK) {
         NSLog(@"✅ License is genuine. Launching app...");
         [self showMainWindow];
     } else {
-        NSLog(@"🔐 License not found or invalid. Prompting for activation...");
+        NSLog(@"🔐 License not found or invalid. Prompting activation...");
         [self promptForLicenseActivation];
     }
 }
@@ -78,21 +84,36 @@
     alert.accessoryView = inputField;
 
     NSModalResponse response = [alert runModal];
+    
+    NSURL *url = [NSURL URLWithString:@"https://api.cryptlex.com/v3"];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url
+                                             cachePolicy:NSURLRequestReloadIgnoringCacheData
+                                         timeoutInterval:5];
+    NSURLSessionDataTask *task = [[NSURLSession sharedSession] dataTaskWithRequest:request
+                                                                 completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        if (error) {
+            dispatch_async(dispatch_get_main_queue(), ^{
+                [self showLicenseError:@"No internet connection. Please check your network."];
+            });
+        }
+    }];
+    [task resume];
 
-    if (response == NSAlertFirstButtonReturn) { // Activate clicked
+
+    if (response == NSAlertFirstButtonReturn) {
         NSString *licenseKey = inputField.stringValue;
         if (licenseKey.length == 0) {
             [self showLicenseError:@"License key cannot be empty."];
             return;
         }
 
-        enum LexStatusCodes status = SetLicenseKey([licenseKey UTF8String]);
-        if (status != LA_OK) {
-            [self showLicenseError:[NSString stringWithFormat:@"SetLicenseKey failed: %d", status]];
+        if (SetLicenseKey([licenseKey UTF8String]) != LA_OK) {
+            [self showLicenseError:@"Failed to set license key"];
             return;
         }
 
-        status = ActivateLicense();
+        enum LexStatusCodes status = ActivateLicense();
+        printf("ActivateLicense status: %d\n", status);
         if (status == LA_OK || status == LA_EXPIRED || status == LA_SUSPENDED) {
             NSLog(@"🎉 License activated successfully!");
             [self showMainWindow];
@@ -124,24 +145,28 @@
                                                          NSWindowStyleMaskResizable)
                                                 backing:NSBackingStoreBuffered
                                                   defer:NO];
-    [self.window setTitle:@"To-Do App (Licensed)"];
+
+    self.window.title = @"To-Do App (Licensed)";
     [self.window makeKeyAndOrderFront:nil];
 
+    // Task input
     self.taskInput = [[NSTextField alloc] initWithFrame:NSMakeRect(20, 350, 260, 30)];
     [self.window.contentView addSubview:self.taskInput];
 
+    // Add button
     self.addButton = [[NSButton alloc] initWithFrame:NSMakeRect(290, 350, 80, 30)];
     [self.addButton setTitle:@"Add Task"];
     [self.addButton setTarget:self];
     [self.addButton setAction:@selector(addTask)];
     [self.window.contentView addSubview:self.addButton];
 
+    // Table view
     NSScrollView *scrollView = [[NSScrollView alloc] initWithFrame:NSMakeRect(20, 20, 360, 320)];
     self.tableView = [[NSTableView alloc] initWithFrame:scrollView.bounds];
 
     NSTableColumn *column = [[NSTableColumn alloc] initWithIdentifier:@"TaskColumn"];
-    [column setWidth:360];
-    [column setTitle:@"Tasks"];
+    column.title = @"Tasks";
+    column.width = 360;
     [self.tableView addTableColumn:column];
 
     self.tableView.delegate = self;
@@ -172,9 +197,7 @@
 - (nullable NSView *)tableView:(NSTableView *)tableView
            viewForTableColumn:(NSTableColumn *)tableColumn
                           row:(NSInteger)row {
-
     NSTextField *cell = [tableView makeViewWithIdentifier:@"TaskCell" owner:self];
-
     if (!cell) {
         cell = [[NSTextField alloc] initWithFrame:NSMakeRect(0, 0, tableColumn.width, 30)];
         cell.bezeled = NO;
@@ -182,7 +205,6 @@
         cell.drawsBackground = NO;
         cell.identifier = @"TaskCell";
     }
-
     cell.stringValue = self.tasks[row];
     return cell;
 }

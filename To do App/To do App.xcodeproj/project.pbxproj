@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXCopyFilesBuildPhase section */
-		9FFD0A5B2EB1C98C0094EEA4 /* Embed Libraries */ = {
+		9FB786BB2EB318EA0066B2DE /* Embed Libraries */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
@@ -20,27 +20,27 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9F03C1872EB0932C00193B2D /* To do App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "To do App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FB786472EB22A180066B2DE /* test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
-		9FFD0A5C2EB1C98C0094EEA4 /* Exceptions for "To do App" folder in "Embed Libraries" phase from "To do App" target */ = {
+		9FB786BC2EB318EA0066B2DE /* Exceptions for "To do App" folder in "Embed Libraries" phase from "test" target */ = {
 			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
 			attributesByRelativePath = {
-				libs/clang/arm64/libLexActivator.dylib = (CodeSignOnCopy, );
+				Cryptlex/libLexActivator.dylib = (CodeSignOnCopy, );
 			};
-			buildPhase = 9FFD0A5B2EB1C98C0094EEA4 /* Embed Libraries */;
+			buildPhase = 9FB786BB2EB318EA0066B2DE /* Embed Libraries */;
 			membershipExceptions = (
-				libs/clang/arm64/libLexActivator.dylib,
+				Cryptlex/libLexActivator.dylib,
 			);
 		};
 /* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		9F03C1892EB0932C00193B2D /* To do App */ = {
+		9FB786492EB22A180066B2DE /* To do App */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				9FFD0A5C2EB1C98C0094EEA4 /* Exceptions for "To do App" folder in "Embed Libraries" phase from "To do App" target */,
+				9FB786BC2EB318EA0066B2DE /* Exceptions for "To do App" folder in "Embed Libraries" phase from "test" target */,
 			);
 			path = "To do App";
 			sourceTree = "<group>";
@@ -48,7 +48,7 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9F03C1842EB0932C00193B2D /* Frameworks */ = {
+		9FB786442EB22A180066B2DE /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -58,24 +58,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9F03C17E2EB0932C00193B2D = {
+		9FB7863E2EB22A180066B2DE = {
 			isa = PBXGroup;
 			children = (
-				9F03C1892EB0932C00193B2D /* To do App */,
-				9F03C1CE2EB0F60B00193B2D /* Frameworks */,
-				9F03C1882EB0932C00193B2D /* Products */,
+				9FB786492EB22A180066B2DE /* To do App */,
+				9FB786B82EB318EA0066B2DE /* Frameworks */,
+				9FB786482EB22A180066B2DE /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		9F03C1882EB0932C00193B2D /* Products */ = {
+		9FB786482EB22A180066B2DE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9F03C1872EB0932C00193B2D /* To do App.app */,
+				9FB786472EB22A180066B2DE /* test.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9F03C1CE2EB0F60B00193B2D /* Frameworks */ = {
+		9FB786B82EB318EA0066B2DE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -85,64 +85,64 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9F03C1862EB0932C00193B2D /* To do App */ = {
+		9FB786462EB22A180066B2DE /* test */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9F03C1992EB0932D00193B2D /* Build configuration list for PBXNativeTarget "To do App" */;
+			buildConfigurationList = 9FB786592EB22A180066B2DE /* Build configuration list for PBXNativeTarget "test" */;
 			buildPhases = (
-				9F03C1832EB0932C00193B2D /* Sources */,
-				9F03C1842EB0932C00193B2D /* Frameworks */,
-				9F03C1852EB0932C00193B2D /* Resources */,
-				9FFD0A5B2EB1C98C0094EEA4 /* Embed Libraries */,
+				9FB786432EB22A180066B2DE /* Sources */,
+				9FB786442EB22A180066B2DE /* Frameworks */,
+				9FB786452EB22A180066B2DE /* Resources */,
+				9FB786BB2EB318EA0066B2DE /* Embed Libraries */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				9F03C1892EB0932C00193B2D /* To do App */,
+				9FB786492EB22A180066B2DE /* To do App */,
 			);
-			name = "To do App";
+			name = test;
 			packageProductDependencies = (
 			);
-			productName = "To do App";
-			productReference = 9F03C1872EB0932C00193B2D /* To do App.app */;
+			productName = test;
+			productReference = 9FB786472EB22A180066B2DE /* test.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		9F03C17F2EB0932C00193B2D /* Project object */ = {
+		9FB7863F2EB22A180066B2DE /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
-					9F03C1862EB0932C00193B2D = {
+					9FB786462EB22A180066B2DE = {
 						CreatedOnToolsVersion = 26.0.1;
 					};
 				};
 			};
-			buildConfigurationList = 9F03C1822EB0932C00193B2D /* Build configuration list for PBXProject "To do App" */;
+			buildConfigurationList = 9FB786422EB22A180066B2DE /* Build configuration list for PBXProject "To do App" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = 9F03C17E2EB0932C00193B2D;
+			mainGroup = 9FB7863E2EB22A180066B2DE;
 			minimizedProjectReferenceProxies = 1;
 			preferredProjectObjectVersion = 77;
-			productRefGroup = 9F03C1882EB0932C00193B2D /* Products */;
+			productRefGroup = 9FB786482EB22A180066B2DE /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9F03C1862EB0932C00193B2D /* To do App */,
+				9FB786462EB22A180066B2DE /* test */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9F03C1852EB0932C00193B2D /* Resources */ = {
+		9FB786452EB22A180066B2DE /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -152,7 +152,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		9F03C1832EB0932C00193B2D /* Sources */ = {
+		9FB786432EB22A180066B2DE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -162,7 +162,7 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		9F03C1972EB0932D00193B2D /* Debug */ = {
+		9FB786572EB22A180066B2DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -223,7 +223,7 @@
 			};
 			name = Debug;
 		};
-		9F03C1982EB0932D00193B2D /* Release */ = {
+		9FB786582EB22A180066B2DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -277,7 +277,7 @@
 			};
 			name = Release;
 		};
-		9F03C19A2EB0932D00193B2D /* Debug */ = {
+		9FB7865A2EB22A180066B2DE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -289,6 +289,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -296,28 +297,16 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
+					"$(PROJECT_DIR)/test/libs/clang/arm64",
+					"$(PROJECT_DIR)/test/libs/clang/x86_64",
+					"$(PROJECT_DIR)/test/libs/clang/universal",
 					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
 					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
 					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
+					"$(PROJECT_DIR)/To\\ do\\ App/Cryptlex",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Fancy-Text-Creator-Application.To-do-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "Fancy-Text-Creator-Application.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -325,7 +314,7 @@
 			};
 			name = Debug;
 		};
-		9F03C19B2EB0932D00193B2D /* Release */ = {
+		9FB7865B2EB22A180066B2DE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -337,6 +326,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -344,28 +334,16 @@
 				);
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
+					"$(PROJECT_DIR)/test/libs/clang/arm64",
+					"$(PROJECT_DIR)/test/libs/clang/x86_64",
+					"$(PROJECT_DIR)/test/libs/clang/universal",
 					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
 					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
 					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/arm64",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/universal",
-					"$(PROJECT_DIR)/To\\ do\\ App/libs/clang/x86_64",
+					"$(PROJECT_DIR)/To\\ do\\ App/Cryptlex",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Fancy-Text-Creator-Application.To-do-App";
+				PRODUCT_BUNDLE_IDENTIFIER = "Fancy-Text-Creator-Application.test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				STRING_CATALOG_GENERATE_SYMBOLS = YES;
@@ -376,25 +354,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F03C1822EB0932C00193B2D /* Build configuration list for PBXProject "To do App" */ = {
+		9FB786422EB22A180066B2DE /* Build configuration list for PBXProject "To do App" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F03C1972EB0932D00193B2D /* Debug */,
-				9F03C1982EB0932D00193B2D /* Release */,
+				9FB786572EB22A180066B2DE /* Debug */,
+				9FB786582EB22A180066B2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9F03C1992EB0932D00193B2D /* Build configuration list for PBXNativeTarget "To do App" */ = {
+		9FB786592EB22A180066B2DE /* Build configuration list for PBXNativeTarget "test" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				9F03C19A2EB0932D00193B2D /* Debug */,
-				9F03C19B2EB0932D00193B2D /* Release */,
+				9FB7865A2EB22A180066B2DE /* Debug */,
+				9FB7865B2EB22A180066B2DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 9F03C17F2EB0932C00193B2D /* Project object */;
+	rootObject = 9FB7863F2EB22A180066B2DE /* Project object */;
 }
