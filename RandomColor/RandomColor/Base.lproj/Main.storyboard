@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yjy-BP-U7X">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="784"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="colorCell" id="Bhf-v4-qrq">
@@ -41,7 +41,7 @@
                             <constraint firstItem="Yjy-BP-U7X" firstAttribute="top" secondItem="Nyg-kF-W4U" secondAttribute="top" id="5qX-Wz-4He"/>
                             <constraint firstAttribute="trailing" secondItem="Yjy-BP-U7X" secondAttribute="trailing" id="KaY-gt-LBc"/>
                             <constraint firstItem="Yjy-BP-U7X" firstAttribute="leading" secondItem="Nyg-kF-W4U" secondAttribute="leading" id="ShQ-53-Btz"/>
-                            <constraint firstAttribute="bottom" secondItem="Yjy-BP-U7X" secondAttribute="bottom" id="r3y-jW-ZTY"/>
+                            <constraint firstItem="Yjy-BP-U7X" firstAttribute="bottom" secondItem="tOy-0T-NhJ" secondAttribute="bottom" id="hew-81-Ath"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="jho-X7-PzR"/>
