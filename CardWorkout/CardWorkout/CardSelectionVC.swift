@@ -28,6 +28,11 @@ class CardSelectionVC: UIViewController {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        timer?.invalidate()
+    }
+    
     func randomCard() -> UIImage {
         let randomIndex = Int.random(in: 0..<cards.count)
         return cards[randomIndex]
