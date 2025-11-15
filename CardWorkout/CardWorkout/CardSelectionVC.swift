@@ -8,22 +8,47 @@
 import UIKit
 
 class CardSelectionVC: UIViewController {
+    
+    @IBOutlet var imageView: UIImageView!
+    @IBOutlet var buttons: [UIButton]!
+    
+    
+    var timer: Timer?
+    
+    var cards: [UIImage] = Card.allValues
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        startTimer()
+        for button in buttons {
+            button.layer.cornerRadius = 12
+            
+        }
+    }
+    
+    func randomCard() -> UIImage {
+        let randomIndex = Int.random(in: 0..<cards.count)
+        return cards[randomIndex]
+    }
+    
+    func  startTimer() {
+        timer = Timer.scheduledTimer(withTimeInterval: 0.1, repeats: true, block: { _ in
+            self.imageView.image = self.randomCard()
+        })
+    }
+    
+    
+    @IBAction func stopButton(_ sender: Any) {
+        timer?.invalidate()
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func restartButton(_ sender: Any) {
+        timer?.invalidate()
+        startTimer()
     }
-    */
+    
 
 }
